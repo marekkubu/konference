@@ -1,3 +1,6 @@
+<?php
+    echo "Vše OK <br>";
+?>
 <link rel="stylesheet" href="styles/login_style.css"></link>
 <h2>Registrace</h2>
 
@@ -11,14 +14,14 @@
     </div>
       <img src="images/logo_avatar.png" alt="Avatar" class="avatar">
     <div class="containerLog">
-      <label><b>Username</b></label>
+      <label><b>Uživatelské jméno</b></label>
       <input type="text" placeholder="Enter Username" name="uname" required>
 
-      <label><b>Password</b></label>
+      <label><b>Heslo</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
 
-        <button type="button" class="btn btn-success">Login</button>
-        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn btn-danger">Cancel</button>
+        <button type="button" class="btn btn-success">Přihlásit</button>
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn btn-danger">Zrušit</button>
     </div>
   </form>
 </div>

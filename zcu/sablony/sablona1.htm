@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles/login_menu.css"></link>
+    <link rel="stylesheet" href="styles/login_style.css"></link>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
@@ -19,6 +20,7 @@
       <a class="navbar-brand" href="index.php">{{nadpis1}}</a>
     </div>
      {{ menu | raw }}
+
 
       <ul class="nav navbar-nav navbar-right">
 
@@ -62,11 +64,37 @@
 
 </nav>
 
-	<div class="container text-center">
+
+
+    <div class="container text-center">
 	{{ obsah  | raw }}
 	</div>
+    {{ include("footer.htm", ignore_missing = true) }}
 
+<div id="id01" class="modal">
 
-	<div>Patièka</div>
+  <form class="modal-content animate" action="action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+      <img src="images/logo_avatar.png" alt="Avatar" class="avatar">
+    <div class="containerLog">
+      <label><b>Uživatelské jméno</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label><b>Heslo</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <button type="button" class="btn btn-success">Přihlásit</button>
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn btn-danger">Zrušit</button>
+    </div>
+  </form>
+</div>
+
+	<footer class="footer">
+    <div class="container">
+        <p class="text-muted"> 2016</p>
+    </div>
+</footer>
 </body>
 </html>

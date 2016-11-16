@@ -77,6 +77,5 @@ $menu .="</ul>";
 	$template_params["obsah"] = $obsah;
     $template_params["menu"] = $menu;
     $template_params["nadpis1"] = "Konference";
-    $template_params["prihlasitSe"] = "Přihlásit se";
 	echo $template->render($template_params);
 ?>
